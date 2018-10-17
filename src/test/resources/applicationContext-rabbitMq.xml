@@ -19,7 +19,7 @@
     <!-- 连接服务器配置 -->
     <rabbit:connection-factory id="connectionFactory" host="192.168.1.223"
                                username="gaofei" password="123456"
-                               port="5672" channel-cache-size="100"/>
+                               port="5672" channel-cache-size="10"/>
 
     <rabbit:admin connection-factory="connectionFactory"/>
 
