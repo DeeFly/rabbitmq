@@ -16,9 +16,9 @@ public class GaofeiMqProducer {
 
     @Autowired
     private RabbitTemplate rabbitTemplateNoExchange;
-    public void sendDataToQueue(Object obj) {
+    public void sendDataToQueue(String key, Object obj) {
         try {
-            rabbitTemplateNoExchange.convertAndSend("routeKey", obj);
+            rabbitTemplateNoExchange.convertAndSend(key, obj);
         } catch (Exception e) {
             logger.warn("异常", e);
         }
